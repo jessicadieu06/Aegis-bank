@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aegis Bank - La néobanque éthique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
         <div class="header__container">
-            <div class="header__logo">Aegis Bank</div>
+            <button class="burger" aria-label="Ouvrir le menu">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+
+            <div class="header__logo">AEGIS BANK</div>
+            
             <nav class="header__nav">
-                <button class="btn btn--secondary">S'inscrire / Se connecter</button>
+                <button class="btn btn--nav">S'inscrire / Se connecter</button>
             </nav>
         </div>
     </header>
@@ -21,7 +28,7 @@
     <main class="hero">
         <div class="hero__container">
             
-            <div class="hero__promo-badge">
+            <div class="hero__promo">
                 <span class="hero__promo-text">20€ offerts - Mars 2026</span>
             </div>
 
@@ -37,9 +44,9 @@
             </div>
 
             <div class="hero__socials">
-                <a href="#" class="hero__social-icon" aria-label="Lien 1">🌱</a>
-                <a href="#" class="hero__social-icon" aria-label="Lien 2">🚀</a>
-                <a href="#" class="hero__social-icon" aria-label="Lien 3">✉️</a>
+                <a href="#" class="hero__social-icon" aria-label="Environnement">🌱</a>
+                <a href="#" class="hero__social-icon" aria-label="Futur">🚀</a>
+                <a href="#" class="hero__social-icon" aria-label="Contact">✉️</a>
             </div>
         </div>
     </main>
