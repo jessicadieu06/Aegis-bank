@@ -1,4 +1,15 @@
-/* style.css */
+/* --- VARIABLES --- */
+:root {
+    --color-black: #111111;
+    --color-white: #ffffff;
+    --color-mint: #e2fce6;
+    --color-mint-dark: #008a45;
+    --color-gray: #555555;
+    --color-border: #eeeeee;
+    /* Simulation de Zalando Sans Expanded */
+    --font-expanded: 'Archivo', sans-serif; 
+    --font-body: 'Inter', sans-serif;
+}
 
 /* RESET & BASE */
 * {
@@ -8,29 +19,59 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #ffffff; /* Fond blanc pur pour la clarté */
-    color: #111111; /* Texte presque noir pour le contraste */
+    font-family: var(--font-body);
+    background-color: var(--color-white);
+    color: var(--color-black);
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
 }
 
-/* BLOC BOUTON (Style Klarna/Revolut) */
+/* --- BLOC BURGER (Conforme à l'image) --- */
+.burger {
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-white);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.burger:active {
+    background-color: #f9f9f9;
+}
+
+.burger__line {
+    width: 18px;
+    height: 2px;
+    background-color: #5d5fef; /* Couleur de la capture originale */
+    border-radius: 2px;
+}
+
+/* --- BLOC BOUTON --- */
 .btn {
     padding: 14px 24px;
-    border-radius: 8px; /* Angles moins arrondis pour un look plus pro */
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     border: none;
     transition: all 0.3s ease;
     font-size: 0.95rem;
+    font-family: var(--font-expanded);
+    text-transform: uppercase;
 }
 
 .btn--primary {
-    background-color: #111111; /* Bouton noir profond */
-    color: #ffffff;
+    background-color: var(--color-black);
+    color: var(--color-white);
     width: 100%;
     margin-top: 10px;
+    padding: 18px;
 }
 
 .btn--primary:hover {
@@ -39,14 +80,14 @@ body {
 }
 
 .btn--secondary {
-    background-color: #ffffff;
-    color: #111111;
-    border: 1.5px solid #111111;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1.5px solid var(--color-black);
     padding: 8px 16px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
-/* HEADER */
+/* --- HEADER --- */
 .header {
     padding: 24px 20px;
 }
@@ -58,27 +99,31 @@ body {
 }
 
 .header__logo {
+    font-family: var(--font-expanded);
     font-weight: 900;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: -1px;
+    flex-grow: 1;
+    margin-left: 15px; /* Espace après le burger */
 }
 
-/* HERO SECTION */
+/* --- HERO SECTION --- */
 .hero {
-    padding: 20px 24px 100px 24px;
+    padding: 20px 24px 120px 24px;
 }
 
 .hero__promo-badge {
     display: inline-block;
-    background-color: #e2fce6; /* Vert menthe très clair (Éthique/Hello Bank) */
-    padding: 6px 12px;
+    background-color: var(--color-mint);
+    padding: 8px 12px;
     border-radius: 4px;
     margin-bottom: 24px;
 }
 
 .hero__promo-text {
-    color: #008a45; /* Vert foncé textuel */
+    font-family: var(--font-expanded);
+    color: var(--color-mint-dark);
     font-weight: 700;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -86,16 +131,17 @@ body {
 }
 
 .hero__title {
+    font-family: var(--font-expanded);
     font-size: 3.2rem;
     font-weight: 800;
-    line-height: 1;
+    line-height: 0.95;
     margin-bottom: 24px;
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
 }
 
 .hero__description {
     font-size: 1.15rem;
-    color: #555555;
+    color: var(--color-gray);
     margin-bottom: 40px;
     font-weight: 400;
 }
@@ -104,23 +150,20 @@ body {
 .hero__socials {
     display: flex;
     gap: 12px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .hero__social-icon {
     width: 56px;
     height: 56px;
     background-color: #f4f4f4;
-    border-radius: 50%; /* Icônes rondes pour varier */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-size: 1.3rem;
     transition: background-color 0.2s;
-}
-
-.hero__social-icon:hover {
-    background-color: #e2fce6;
 }
 
 /* FOOTER */
@@ -128,9 +171,9 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     padding: 20px;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid var(--color-border);
 }
 
 .footer__list {
@@ -140,9 +183,10 @@ body {
 }
 
 .footer__link {
+    font-family: var(--font-expanded);
     text-decoration: none;
     color: #888888;
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.65rem;
+    font-weight: 800;
     text-transform: uppercase;
 }
