@@ -38,5 +38,6 @@ Technique : Maîtriser l'intégration responsive et la mise en ligne d'un produi
 
 🚀 Aperçu du projet
 👉 Lien du site : https://incredible-otter-907d6b.netlify.app/
-👤 Auteur
+
+👤 Auteur :
 Projet réalisé par Dieu Jessica
